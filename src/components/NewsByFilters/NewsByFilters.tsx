@@ -55,7 +55,6 @@ const NewsByFilters = () => {
       >
         <NewsList isLoading={isLoading} news={data?.news} />
       </PaginationWrapper>
-
     </section>
   );
 };
