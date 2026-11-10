@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import { themeIcon } from "../../assets";
 import { formatDate } from "../../helpers/formatDate";
 import styles from "./styles.module.css";
