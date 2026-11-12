@@ -1,0 +1,19 @@
+import { NewsItem, type Inews } from "@/entities/news";
+import styles from "./styles.module.css";
+import withSkeleton from "@/shared/hocs/withSkeleton";
+
+interface Props {
+  news?: Inews[];
+}
+
+const NewsList = ({ news }: Props) => {
+  return (
+    <ul className={styles.list}>
+      {news?.map((item) => {
+        return <NewsItem key={item.id} item={item} />;
+      })}
+    </ul>
+  );
+};
+const NewsListWithSkeleton = withSkeleton<Props>(NewsList, "item", 10);
+export default NewsListWithSkeleton;
